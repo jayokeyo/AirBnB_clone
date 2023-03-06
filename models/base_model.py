@@ -4,6 +4,7 @@ class BaseModel
 defines all common attributes/methods for other classes
 '''
 import datetime
+import uuid
 class BaseModel:
     '''
     BaseModel with attributes and methods inherited by other classes
