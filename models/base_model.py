@@ -16,7 +16,7 @@ class BaseModel:
         self.id = str(uuid.uuid4())
         self.created_at = datetime.datetime.now()
         self.updated_at = datetime.datetime.now()
-        if (len(**kwargs != 0)):
+        if (len(kwargs != 0)):
             for key, value in kwargs.items():
                 if (key == "created_at" or key == "updated_at"):
                     self.__dict__[k] = datetime.strptime(v, tform)
