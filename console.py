@@ -1,5 +1,26 @@
 #!/usr/bin/python3
-"""Defines the HBnB console."""
+"""
+The HBnB console.
+parse(arg): makes arg readable to the interpreter.
+	Arguments: arg - command line passed by user
+	Return: parsed command
+HBNBCommand(cmd.Cmd): inherits the cmd.Cmd class
+			Defines a simple command interpreter for AirBnB_clone project.
+Attributes:
+	help:
+		Usage: help <function> e.g help create
+    		Displays the help docstring of the function
+	quit(self, arg): quit from the command interpreter
+	EOF(self, arg): handle EOF (^D)
+	create(self, arg): creates an instance of class
+	show(self, arg): Display the string representation of a class instance of a given id
+	destroy(self, arg): Delete a class instance of a given id.
+	all(self, arg): Display string representations of all instances of a given class.
+        		If no class is specified, displays all instantiated objects.
+	count(self, arg): Retrieve the number of instances of a given class.
+	update(self, arg): Update a class instance of a given id by adding or updating
+        		a given attribute key/value pair or dictionary.
+"""
 import cmd
 import re
 import sys
