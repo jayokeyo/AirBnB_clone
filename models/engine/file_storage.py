@@ -10,7 +10,7 @@ from models.city import City
 from models.place import Place
 from models.amenity import Amenity
 from models.review import Review
-class FileStorage(BaseModel):
+class FileStorage:
     '''
     Defines class FileStorage for conducting JSON dump and JSON load
     '''

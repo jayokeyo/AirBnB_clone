@@ -186,8 +186,8 @@ class HBNBCommand(cmd.Cmd):
     def help_all(self):
         '''help statement for all command'''
         print("\n".join(["Usage: all or all [class] or [class].all",
-            "Display string representation of all instances of a given class/
-            if no class is specified, all displays instantiated objects",
+            "Display string representation of all instances of a given class",
+            "if no class is specified, all displays instantiated objects",
             "Return: Nothing"]))
 
     def do_count(self, arg):
@@ -255,9 +255,9 @@ class HBNBCommand(cmd.Cmd):
 
     def help_update(self):
         '''help statement for update command'''
-        print("\n".join(["Usage: update [class] [id] [attribute_name] [attribute_value] or/
-            [class].update([id], [attribute_name, attribute_vale]) or/
-            [class].update([id], dictionary)",
+        print("\n".join(["Usage: update [class] [id] [attribute_name] [attribute_value] or",
+            "[class].update([id], [attribute_name, attribute_vale]) or",
+            "[class].update([id], dictionary)",
             "Updates a class instance of a given unique id",
             "Return: Nothing"]))
 
