@@ -37,7 +37,7 @@ class FileStorage(BaseModel):
         deserializes the JSON file to __objects (only if the JSON file (__file_path) exists ;
         otherwise, do nothing. If the file doesn’t exist, no exception should be raised)
         '''
-         try:
+        try:
             with open(FileStorage.__file_path) as f:
                 objdict = json.load(f)
                 for o in objdict.values():
