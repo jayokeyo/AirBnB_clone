@@ -3,6 +3,7 @@
 class BaseModel
 defines all common attributes/methods for other classes
 '''
+import models
 import datetime
 import uuid
 class BaseModel:
@@ -36,6 +37,7 @@ class BaseModel:
         updates the attribute updated_at with the current datetime value
         '''
         self.updated_at = datetime.datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         '''
