@@ -96,11 +96,11 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(self, arg):
         """Quit the command interpreter."""
-        sys.exit(1)
+        return True
 
     def do_EOF(self, arg):
         """EOF signal to exit the program."""
-        sys.exit(1)
+        return True
 
     def do_create(self, arg):
         """

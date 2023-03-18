@@ -15,8 +15,8 @@ class BaseModel:
         creates new instance of the BaseModel
         '''
         self.id = str(uuid.uuid4())
-        self.created_at = datetime.datetime.now()
-        self.updated_at = datetime.datetime.now()
+        self.created_at = datetime.datetime.today()
+        self.updated_at = datetime.datetime.today()
         if (len(kwargs) != 0):
             for key, value in kwargs.items():
                 if (key == "created_at" or key == "updated_at"):
@@ -30,13 +30,13 @@ class BaseModel:
         '''
         defines how the returned string is printed out in stdout
         '''
-        return "{}({}){}".format(self.__class__.__name__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
         '''
         updates the attribute updated_at with the current datetime value
         '''
-        self.updated_at = datetime.datetime.now()
+        self.updated_at = datetime.datetime.today()
         models.storage.save()
 
     def to_dict(self):
